@@ -7,7 +7,9 @@ if __name__ == '__main__':
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     sign = sys.argv[2]
-
+    if len(sys.argv) != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     if sign != '*' or sign != '/' or sign != '+' or sign != '-':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
