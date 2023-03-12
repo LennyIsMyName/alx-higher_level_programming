@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     if sign != '*' or sign != '/' or sign != '+' or sign != '-':
         print("Unknown operator. Available operators: +, -, * and /")
-        return (1)
+        exit(1)
     if sys.argv[2] == '+':
         print('{} + {} = {}'.format(a, b, add(a, b)))
     elif sys.argv[2] == '-':
