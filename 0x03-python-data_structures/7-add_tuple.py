@@ -7,7 +7,19 @@ def add_tuple(tuple_a=(), tuple_b=()):
         new = (fir, sec)
         return new
     else:
-        fir = tuple_a[0] or 0 + tuple_b[0] or 0
-        sec = tuple_a[1] or 0 + tuple_b[1] or 0
+        tuplist1 = list(tuple_a)
+        tuplist2 = list(tuple_b)
+        if len(tuplist1) == 1:
+            tuplist1.append(0)
+        if len(tuplist2) == 1:
+            tuplist2.append(0)
+        if len(tuplist1) == 0:
+            tuplist1.append(0)
+            tuplist1.append(0)
+        if len(tuplist2) == 0:
+            tuplist2.append(0)
+            tuplist2.append(0)
+        fir = tuplist1[0] + tuplist2[0]
+        sec = tuplist1[1] + tuplist2[1]
         new = (fir, sec)
         return new
