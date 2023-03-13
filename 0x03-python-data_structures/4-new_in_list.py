@@ -9,4 +9,3 @@ def new_in_list(my_list, idx, element):
         new.append(my_list[i])
     new[idx] = element
     return new
-
