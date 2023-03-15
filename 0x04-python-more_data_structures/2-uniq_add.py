@@ -6,9 +6,6 @@ def uniq_add(my_list=[]):
     for i in setIt:
         ans = ans + i
     return ans
-
-
-
     '''
     ans = 0
     for num in my_list:
