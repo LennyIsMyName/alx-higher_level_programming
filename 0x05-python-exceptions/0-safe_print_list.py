@@ -3,23 +3,30 @@
 def safe_print_list(my_list=[], x=0):
     try:
         list2 = list()
-        string = ''
-        no_of_items = 0
-
-        for i in range(my_list[0], my_list[x] - 1):
-            list2.append(my_list[i])
-            no_of_items += 1
-
-        my_list = list2
-
-#            string = ''.join([str(el) for el in my_list])
-        return int(string), no_of_items
+        count = 0
+        counti = 0
+        for item in my_list:
+            counti += 1
+        for i in range(0, x):
+            list2.append(str(my_list[i]))
+            count += 1
+        string = ''.join(list2)
+        inte = int(string)
     except IndexError:
-        return no_of_items
+        countE = 0
+        listE = list()
+        for i in range(0, countE):
+            list2.append(str(my_list[i]))
+        stringE = ''.join(listE)
+        intE = int(stringE)
+        return intE
     except TypeError:
-        return no_of_items
+        pass
+    except ValueError:
+        pass
+    except:
+        pass
     else:
-        string = ''.join(my_list)
-        return int(string)
-
-
+        print(inte)
+    finally:
+        return count
