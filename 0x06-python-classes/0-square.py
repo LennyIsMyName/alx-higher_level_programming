@@ -4,3 +4,4 @@
 class Square:
     """ Very useless class"""
     pass
+""" Do nothing """
