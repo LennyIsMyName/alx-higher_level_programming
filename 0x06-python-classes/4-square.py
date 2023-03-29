@@ -1,35 +1,36 @@
 #!/usr/bin/python3
 
-""" Area of a square """
+""" size validation of Square"""
 
 class Square:
+    """ The square class """
+
     def __init__(self, size=0):
-        """ instances size. 
+        """ init a new square class. 
         Args:
             size (int): size to validate.
             """
-        self.__size = size
 
-    try:
-        def check_type(self):
-            if isinstance(self.__size, int):
-                if (self.__size < 0):
-                    raise ValueError("size must be >= 0")
-            else:
-                raise TypeError("size must be an integer")
-    except TypeError as t:
-        t = "size must be an integer"
-        print(t)
-    except ValueError as v:
-            v = "size must be >= 0"
-            print(v)
-    def area(self):
-        """ returns the square of a number """
-        area = self.__size**2
-        return (area)
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
     @property
     def size(self):
         return self.__size
+
     @size.setter
-    def size(self, size):
-        self.__size = size
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+
+    def area(self):
+        """ returns the area of the current square"""
+        var = self.__size * self.__size
+        return var
+
