@@ -35,6 +35,7 @@ class Square:
         return var
 
     def my_print(self):
+        """ prints a square of # characters """
         if self.__size:
             for i in range(self.__size):
                 for j in range(self.__size):
