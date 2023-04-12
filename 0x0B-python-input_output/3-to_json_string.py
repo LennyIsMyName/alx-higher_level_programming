@@ -13,4 +13,5 @@ def to_json_string(my_obj):
         my_obj (object): the object to be converted.
     Returns: the JSON representation of my_obj
     """
-    return json.dumps(my_obj)
+    jsn = json.dumps(my_obj)
+    return jsn
