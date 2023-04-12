@@ -22,4 +22,4 @@ def read_file(filename=""):
             nothing
         """
         text = myFile.read()
-        print(text)
+        print(text, end="")
