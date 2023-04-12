@@ -21,4 +21,5 @@ def read_file(filename=""):
         Returns:
             nothing
         """
-        print(myFile.read())
+        text = myFile.read()
+        print(text)
