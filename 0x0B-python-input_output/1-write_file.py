@@ -2,6 +2,7 @@
 
 """ this program writes text into a file """
 
+
 def write_file(filename="", text=""):
     """
     writes into filename file
@@ -22,4 +23,3 @@ def write_file(filename="", text=""):
             number of chars input.
         """
         return myFile.write(text)
-
