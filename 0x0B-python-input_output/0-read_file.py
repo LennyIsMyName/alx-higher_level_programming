@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-import os
-
-
 """ opens a file and print it to stdout """
 
 
