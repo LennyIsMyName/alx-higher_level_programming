@@ -7,11 +7,6 @@ import json
 
 
 def to_json_string(my_obj):
-    """
-    converts an object to JSON
-    Args:
-        my_obj (object): the object to be converted.
-    Returns: the JSON representation of my_obj
-    """
+    """ converts an object to JSON """
     jsn = json.dumps(my_obj)
     return jsn
