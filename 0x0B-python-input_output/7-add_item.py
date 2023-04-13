@@ -14,10 +14,12 @@ def add_item(args: list[str]):
     file = "add_item.json"
 
     if path.isfile(file):
+        """ get the json object """
         li = fro(file)
     else:
         li = []
     li.extend(args)
+    """ append the list to json file as json """
     to(li, file)
 
 
