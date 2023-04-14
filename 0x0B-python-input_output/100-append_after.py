@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-""" A function that inserts a line of text to a file, after every line that contains a specific string """
+""" A function that inserts a line of text to a file,
+after every line that contains a specific string 
+"""
+
 
 def append_after(filename="", search_string="", new_string=""):
     """ imputs a string in the next line after a specific string """
