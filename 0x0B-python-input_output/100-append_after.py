@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """ A function that inserts a line of text to a file,
-after every line that contains a specific string 
+after every line that contains a specific string
 """
 
 
