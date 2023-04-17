@@ -106,7 +106,7 @@ class Rectangle(Base):
         """ overwrite the __str__ method """
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update the values """
         li = [self.id, self.__width, self.__height, self.__x, self.__y]
 
@@ -132,3 +132,16 @@ class Rectangle(Base):
             self.__height = args[2]
             self.__x = args[3]
             self.__y = args[4]
+
+        if le == 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
