@@ -109,7 +109,6 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print('#', end="")
             print()
-        print()
 
     def __str__(self):
         """ overwrite the __str__ method """
