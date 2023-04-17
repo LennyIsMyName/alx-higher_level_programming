@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """ inherit base to rectangle """
-##from base import Base
+# from base import Base
 from models.base import Base
+
 
 class Rectangle(Base):
     """ the rectangle class """
@@ -33,8 +34,7 @@ class Rectangle(Base):
         else:
             self.__y = y
         super().__init__(id)
-    
-    
+
     @property
     def width(self):
         """ get the width """
@@ -63,7 +63,7 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError("height must be > 0")
         else:
-            self.__height = value 
+            self.__height = value
 
     @property
     def x(self):
@@ -78,7 +78,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("x must be >= 0")
         else:
-            self.__x = value 
+            self.__x = value
 
     @property
     def y(self):
@@ -93,7 +93,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         else:
-            self.__y = value 
+            self.__y = value
 
     def area(self):
         return self.__width * self.__height
@@ -103,8 +103,8 @@ class Rectangle(Base):
         for k in range(self.__y):
             print()
         for i in range(self.__height):
-            for l in range(self.__x):
-                print(" ", end='')
+            # for l in range(self.__x):
+            print(" " * self.__x, end='')
             for j in range(self.__width):
                 print('#', end="")
             print()
@@ -112,7 +112,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """ overwrite the __str__ method """
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+                                                self.id,
+                                                self.__x,
+                                                self.__y,
+                                                self.__width,
+                                                self.__height)
 
     def update(self, *args, **kwargs):
         """ update the values """
