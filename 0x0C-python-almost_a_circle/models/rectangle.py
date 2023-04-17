@@ -91,10 +91,15 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print('#', end='')
+        for k in range(self.__y):
             print()
+        for i in range(self.__height):
+            for l in range(self.__x):
+                print(" ", end='')
+            for j in range(self.__width):
+                print('#', end="")
+            print()
+        print()
 
     def __str__(self):
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height)
