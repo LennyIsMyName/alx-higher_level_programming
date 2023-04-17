@@ -91,6 +91,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """ display the rectangle """
         for k in range(self.__y):
             print()
         for i in range(self.__height):
@@ -102,4 +103,32 @@ class Rectangle(Base):
         print()
 
     def __str__(self):
+        """ overwrite the __str__ method """
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """ update the values """
+        li = [self.id, self.__width, self.__height, self.__x, self.__y]
+
+        le = len(args)
+
+        if le == 1:
+            self.id = args[0]
+        if le == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        if le == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        if le == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        if le == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
