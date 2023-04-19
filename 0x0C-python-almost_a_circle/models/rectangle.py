@@ -120,6 +120,7 @@ class Rectangle(Base):
                                                 self.__height)
 
     def to_dictionary(self):
+        """ returns a dict representation of this class """
         dic = {
                 'x': self.__x,
                 'y': self.__y,
