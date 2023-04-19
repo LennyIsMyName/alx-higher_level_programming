@@ -11,11 +11,12 @@ class Square(Rectangle):
 
     def __str__(self):
         """ overwrite the __str__ method """
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
-                                                self.id,
-                                                self.x,
-                                                self.y,
-                                                self.width)
+        return "[{}] ({}) {}/{} - {}".format(
+                type(self).__name__,
+                self.id,
+                self.x,
+                self.y,
+                self.width)
 
     @property
     def size(self):
@@ -71,4 +72,3 @@ class Square(Rectangle):
                     self.__x = value
                 if key == "y":
                     self.__y = value
-
