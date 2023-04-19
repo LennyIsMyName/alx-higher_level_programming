@@ -37,7 +37,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ update the values """
-        li = [self.id, self.__width, self.__height, self.__x, self.__y]
+        li = [self.id, self.size, self.x, self.y]
 
         le = len(args)
 
@@ -45,32 +45,24 @@ class Square(Rectangle):
             self.id = args[0]
         if le == 2:
             self.id = args[0]
-            self.__width = args[1]
+            self.size = args[1]
         if le == 3:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
+            self.size = args[1]
+            self.x = args[2]
         if le == 4:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-        if le == 5:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
 
         if le == 0:
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
-                if key == "width":
-                    self.__width = value
-                if key == "height":
-                    self.__height = value
+                if key == "size":
+                    self.width = value
                 if key == "x":
-                    self.__x = value
+                    self.x = value
                 if key == "y":
-                    self.__y = value
+                    self.y = value
