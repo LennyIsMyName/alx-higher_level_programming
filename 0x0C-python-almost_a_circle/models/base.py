@@ -40,3 +40,15 @@ class Base:
         if json_string is None:
             return list()
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ return an instance with all attributes already set. """
+        if cls.__name__ == 'Square':
+            temp = cls(2)
+        elif cls.__name__ == 'Rectangle':
+            temp = cls(2, 3)
+
+        if isinstance(temp, Base):
+            temp.update(**dictionary)
+            return temp
