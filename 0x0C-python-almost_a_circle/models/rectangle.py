@@ -119,6 +119,15 @@ class Rectangle(Base):
                                                 self.__width,
                                                 self.__height)
 
+    def to_dictionary(self):
+        dic = {
+                'x': self.__x,
+                'y': self.__y,
+                'id': self.id,
+                'height': self.__height,
+                'width': self.__width}
+        return dic
+
     def update(self, *args, **kwargs):
         """ update the values """
         li = [self.id, self.__width, self.__height, self.__x, self.__y]
