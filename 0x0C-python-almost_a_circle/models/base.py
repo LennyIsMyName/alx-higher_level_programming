@@ -33,3 +33,8 @@ class Base:
             li.append(item.to_dictionary())
         with open(name, "w") as file:
             file.write(cls.to_json_string(li))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the json string """
+        return json.loads(json_string)
