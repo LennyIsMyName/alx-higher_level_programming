@@ -2,7 +2,7 @@
 
 """ the base of all classes """
 import json
-
+import csv
 
 class Base:
     """ defining the init """
@@ -52,3 +52,23 @@ class Base:
         if isinstance(temp, Base):
             temp.update(**dictionary)
             return temp
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save a python object to csv file as csv """
+        fname = cls.__name__
+
+        with open(fname + "csv", "w") as file:
+            writer = csv.writer(file)
+            if fname == "Rectangle":
+                writer.writerow(["id", "width", "height", "x", "y"])
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+            elif fname == "Square":
+                writer.writerow(["id", "size", "x", "y"])
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        pass
