@@ -10,4 +10,4 @@ const factorial = (n) => {
   }
 };
 
-console.log(factorial(num));
+console.log(factorial(num).toString());
