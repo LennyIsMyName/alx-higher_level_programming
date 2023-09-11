@@ -1,0 +1,7 @@
+#test file for no. 7
+>>> from .. import 7-base_geometry
+>>> base = BaseGeometry.integer_validator("lenny", 21)
+
+>>> base1 = BaseGeometry.integer_validatro("lenny, -2)
+
+
