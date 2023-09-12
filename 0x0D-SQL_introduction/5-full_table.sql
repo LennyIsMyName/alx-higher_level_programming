@@ -1,6 +1,13 @@
 -- Prints a table description.
 
-SELECT COLUMN_NAME, DATA_TYPE, EXTRA, IS_NULLABLE, COLUMN_DEFAULT, COLUMN_TYPE, COLUMN_KEY
-FROM INFORMATION_SCHEMA.COLUMNS 
-WHERE TABLE_SCHEMA = 'hbtn_0c_0'
-AND TABLE_NAME = 'first_table';
+USE hbtn_0c_0;
+GO
+
+DECLARE @TableName NVARCHAR(128) = 'first_table';
+PRINT 'TableName: ' + @TableName;
+
+PRINT 'Colomns:';
+EXEC sp_colomns @TableName;
+
+PRINT 'Primary Key:';
+EXEC sp_pkeys @TableName;
